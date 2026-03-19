@@ -5,6 +5,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar';
 import Card from './components/Card';
+import Counter from './components/Counter';
 
 
 function App() {
@@ -19,8 +20,12 @@ function App() {
         <Card title='Product 1' description="peepee"/>
         <Card title='Product 2' description="poopoo"/>
         <Card title='Product 3' description="peepoo"/>
+
       </div>
-      
+      <footer className="app-footer">
+
+        <Counter/>
+      </footer>
       
       {/* <section id="center">
         <div className="hero">
