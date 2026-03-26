@@ -7,7 +7,9 @@ function Navbar() {
                 <h2>My App</h2>
                 <ul>
                     <li>Home</li>
-                    <li>About</li>
+                    <li>Upcoming</li>
+                    <li>Watchlist</li>
+                    <li>Sign Out</li>
                 </ul>
             </nav>
         </>

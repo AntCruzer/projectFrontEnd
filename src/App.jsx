@@ -1,149 +1,107 @@
-import { useState } from 'react'
-
-// MIGHT NOT NEED THESE
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 
-
 import './App.css'
-import Navbar from './components/Navbar';
-import Card from './components/Card';
-import Counter from './components/Counter';
-import RegisterForm from './components/RegisterForm';
-
+import Navbar from './components/Navbar'
+import Card from './components/Card'
+import Counter from './components/Counter'
+import RegisterForm from './components/RegisterForm'
 
 function App() {
-
-  // NOT IN EXAMPLE REPO
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
-      <h1>Hello, Friend!</h1>
 
-      <div className='container'>
-        <Card title='Product 1' description="peepee"/>
-        <Card title='Product 2' description="poopoo"/>
-        <Card title='Product 3' description="peepoo"/>
-      </div>
+      <header className="hero-section">
+        <img src={heroImg} alt="ReelRemind hero image" className="hero-image" />
+        <h1>ReelRemind</h1>
+        <p>
+          Track upcoming movies and stay updated on release dates and ticket sale dates.
+        </p>
+      </header>
 
-      <div className ='container'>
-        <RegisterForm/>
-      </div>
+      <section>
+        <h2>Followed Movies</h2>
+
+        <div className="container">
+          <Card
+            title="Spider-Man: Brand New Day"
+            description="Release Date: July 31, 2026"
+            p= "Ticket Sale Begins: TBD"
+          />
+          <Card
+            title="Avengers: Doomsday"
+            description="Release Date: December 18, 2026."
+            p="Ticket Sale Begins: TBD"
+          />
+          <Card
+            title="The Batman Part II"
+            description="Release Date: October 1, 2027"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Create Your Account</h2>
+
+        <div className="container">
+          <RegisterForm />
+        </div>
+      </section>
 
       <footer className="app-footer">
-        <Counter/>
+        <h2>Movies Tracked</h2>
+        <Counter />
       </footer>
-      
-      {/* <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section> */}
     </>
   )
 }
 
 export default App
+
+// import { useState } from 'react'
+
+// // MIGHT NOT NEED THESE
+// import reactLogo from './assets/react.svg'
+// import viteLogo from './assets/vite.svg'
+// import heroImg from './assets/hero.png'
+
+
+// import './App.css'
+// import Navbar from './components/Navbar';
+// import Card from './components/Card';
+// import Counter from './components/Counter';
+// import RegisterForm from './components/RegisterForm';
+
+
+// function App() {
+
+//   // NOT IN EXAMPLE REPO
+//   const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+//       <Navbar />
+//       <h1>Hello, Friend!</h1>
+
+//       <div className='container'>
+//         <Card title='Product 1' description="peepee"/>
+//         <Card title='Product 2' description="poopoo"/>
+//         <Card title='Product 3' description="peepoo"/>
+//       </div>
+
+//       <div className ='container'>
+//         <RegisterForm/>
+//       </div>
+
+//       <footer className="app-footer">
+//         <Counter/>
+//       </footer>
+      
+//       {
+        
+//       }
+//     </>
+//   )
+// }
+
+// export default App
