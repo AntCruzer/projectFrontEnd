@@ -1,7 +1,11 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
+
+// MIGHT NOT NEED THESE
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+
+
 import './App.css'
 import Navbar from './components/Navbar';
 import Card from './components/Card';
@@ -10,12 +14,14 @@ import RegisterForm from './components/RegisterForm';
 
 
 function App() {
+
+  // NOT IN EXAMPLE REPO
   const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar />
-      <h1>Hello muthafucka!</h1>
+      <h1>Hello, Friend!</h1>
 
       <div className='container'>
         <Card title='Product 1' description="peepee"/>

@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-
 import './RegisterForm.css';
 
 function RegisterForm() {
 
     const [formData, setFormData] = useState({
-
         username: '',
         email: '',
         password: ''
@@ -16,8 +14,6 @@ function RegisterForm() {
     useEffect(() =>{
 
         const timer = setTimeout(() => {
-
-
             if(formData.password.length === 0) {
                 setMessage('');
             } else if(formData.password.length < 5) {
@@ -27,20 +23,15 @@ function RegisterForm() {
             else {
                 setMessage('Password looks good!');
             }
-
         }, 500)
 
         return () => clearTimeout(timer);
 
     }, [formData.password]);
 
-
-
     const handleChange = (e) => {
-
         const { name, value} = e.target;
         console.log("Target: ", e.target);
-        
         setFormData(prevState => ({
 
            ...prevState,
@@ -49,10 +40,7 @@ function RegisterForm() {
         }));
     }
 
-
-
     return (
-
         <>
             <div className="register-container">
 
