@@ -6,6 +6,7 @@ import './App.css'
 import Navbar from './components/Navbar';
 import Card from './components/Card';
 import Counter from './components/Counter';
+import RegisterForm from './components/RegisterForm';
 
 
 function App() {
@@ -15,15 +16,18 @@ function App() {
     <>
       <Navbar />
       <h1>Hello muthafucka!</h1>
-      <div className='container'>
 
+      <div className='container'>
         <Card title='Product 1' description="peepee"/>
         <Card title='Product 2' description="poopoo"/>
         <Card title='Product 3' description="peepoo"/>
-
       </div>
-      <footer className="app-footer">
 
+      <div className ='container'>
+        <RegisterForm/>
+      </div>
+
+      <footer className="app-footer">
         <Counter/>
       </footer>
       
