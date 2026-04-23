@@ -77,3 +77,282 @@
   border-top: 1px solid #444;
   color: #9ca3af;
 }
+
+/* MOVIES PAGE */
+
+.movies-page {
+  padding: 2rem 1.25rem 3rem;
+}
+
+.movies-page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.movies-page-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #9ca3af;
+}
+
+.movies-search-panel {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 1.25rem;
+  border: 1px solid #333;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.movies-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-search-input {
+  flex: 1 1 320px;
+  min-width: 240px;
+  max-width: 540px;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.primary-action-button,
+.secondary-action-button {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-action-button {
+  border: none;
+  background-color: #ff7f00;
+  color: white;
+}
+
+.secondary-action-button {
+  border: 1px solid #ff7f00;
+  background-color: transparent;
+  color: #ff7f00;
+}
+
+.primary-action-button:disabled,
+.secondary-action-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.movies-helper-text {
+  margin-top: 0.9rem;
+  color: #9ca3af;
+}
+
+.movies-success {
+  margin-top: 1rem;
+  color: lightgreen;
+}
+
+.movies-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.movies-column {
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.movies-section-header {
+  margin-bottom: 1rem;
+}
+
+.movies-section-header h3 {
+  margin: 0;
+  color: #f3f4f6;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.movies-placeholder-text {
+  color: #9ca3af;
+  padding: 1rem 0.25rem;
+}
+
+.movie-browser-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #22252c;
+  text-align: left;
+}
+
+.movie-browser-poster {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.movie-browser-poster-placeholder {
+  width: 120px;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #30343d;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.movie-browser-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.movie-browser-content h3 {
+  margin: 0;
+  color: #61dafb;
+}
+
+.movie-browser-meta {
+  color: #cbd5e1;
+}
+
+.movie-browser-overview {
+  color: #d1d5db;
+  line-height: 1.45;
+}
+
+.movie-card-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 960px) {
+  .movies-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-browser-card {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-browser-poster,
+  .movie-browser-poster-placeholder {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    margin: 0 auto;
+  }
+
+  .movie-card-button {
+    align-self: stretch;
+  }
+}
+
+/* .page-shell {
+  min-height: calc(100vh - 140px);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.hero-image {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-section p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  text-decoration: none;
+  background-color: #ff7f00;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.secondary-link {
+  background-color: transparent;
+  border: 1px solid #ff7f00;
+  color: #ff7f00;
+}
+
+.movies-section,
+.account-section,
+.dashboard-section {
+  padding: 2rem 1rem;
+}
+
+.dashboard-subtext {
+  margin-top: 0.5rem;
+  color: #9ca3af;
+}
+
+.dashboard-error {
+  color: #ff6b6b;
+  margin-top: 1rem;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.25rem 1rem 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  color: #9ca3af;
+} */
