@@ -1,27 +1,60 @@
-import { useState } from 'react'
-import './Card.css'
+import { useState } from 'react';
+import './Card.css';
 
+function Card({
+  title,
+  description,
+  extraText,
+  showTrackButton = false
+}) {
+  const [tracked, setTracked] = useState(false);
 
-function Card(props) {
-  const [tracked, setTracked] = useState(false)
-
-
-  // FUNCTION: TOGGLES TRACKED STATUS TO OTHER BINARY STATE
-  function handleTrackClick() {
-    setTracked(!tracked)
-  }
+  const handleTrackClick = () => {
+    setTracked((prevState) => !prevState);
+  };
 
   return (
     <div className="card">
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
-      <p>{props.releaseDate}</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
 
-      <button onClick={handleTrackClick}>
-        {tracked ? 'Tracked' : 'Track Movie'}
-      </button>
+      {extraText && <p>{extraText}</p>}
+
+      {showTrackButton && (
+        <button onClick={handleTrackClick}>
+          {tracked ? 'Tracked' : 'Track Movie'}
+        </button>
+      )}
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
+
+// import { useState } from 'react'
+// import './Card.css'
+
+
+// function Card(props) {
+//   const [tracked, setTracked] = useState(false)
+
+
+//   // FUNCTION: TOGGLES TRACKED STATUS TO OTHER BINARY STATE
+//   function handleTrackClick() {
+//     setTracked(!tracked)
+//   }
+
+//   return (
+//     <div className="card">
+//       <h3>{props.title}</h3>
+//       <p>{props.description}</p>
+//       <p>{props.releaseDate}</p>
+
+//       <button onClick={handleTrackClick}>
+//         {tracked ? 'Tracked' : 'Track Movie'}
+//       </button>
+//     </div>
+//   )
+// }
+
+// export default Card

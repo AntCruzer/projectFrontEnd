@@ -1,4 +1,73 @@
 .register-container {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #444;
+  border-radius: 14px;
+  background-color: #20232a;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.submit-button,
+.mode-button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submit-button {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.mode-button {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+}
+
+.form-message {
+  margin-top: 1rem;
+}
+
+.success-message {
+  color: lightgreen;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+.live-preview {
+  margin-top: 1rem;
+  color: #61dafb;
+}
+
+
+/* .register-container {
     max-width: 300px;
     margin: 0 auto;
     text-align: center;
@@ -23,4 +92,4 @@
 .live-preview {
     margin-top: 1rem;
     color: #61dafb;
-}
+} */
