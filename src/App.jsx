@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Card from './components/Card'
 import Counter from './components/Counter'
 import RegisterForm from './components/RegisterForm'
+import { Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -23,6 +25,11 @@ function App() {
         <h2>Popular</h2>
 
         <div className="container">
+
+          {/* <div className='container'>
+            <RegisterForm/>
+          </div> */}
+          
           <Card
             title="Spider-Man: Brand New Day"
             description="Release Date: July 31, 2026."
