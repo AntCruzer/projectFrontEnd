@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './RegisterForm.css';
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || 'https://projectfrontend-szii.onrender.com';
+  import.meta.env.VITE_API_BASE_URL || 'https://practiceapp-kxv8.onrender.com';
 
 function RegisterForm({ mode = 'register' }) {
   const navigate = useNavigate();

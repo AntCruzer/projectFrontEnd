@@ -4,7 +4,7 @@ import '../App.css';
 import Card from '../components/Card';
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || 'https://projectfrontend-szii.onrender.com';
+  import.meta.env.VITE_API_BASE_URL || 'https://practiceapp-kxv8.onrender.com';
 
 function Dashboard() {
   const navigate = useNavigate();
